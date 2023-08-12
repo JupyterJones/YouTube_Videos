@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Flask App</h1>
+        <div class="column">
+            <h1>Flask App</h1>
+            <p><a href="{{ url_for('index') }}">HOME</a></p>
+            <p><a href="{{ url_for('show_input_form') }}">Enter Data</a></p>
+            <p><a href="{{ url_for('searchdb') }}">Search The Notes database</a></p>
+            <p><a href="{{ url_for('read_text') }}">Create An Audio File</a></p>
+        </div>
+
+    <div class="column">
+        <img src="{{ url_for('static', filename='images/Welcome.jpg') }}" alt="Welcome Image">
+        <br />
+        <video controls width="300">
+            <source src="{{ url_for('static', filename='videos/welcome.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p><a href="{{ url_for('show_input_form') }}">Click here to enter data</a><br />
+            <a href="{{ url_for('searchdb') }}">Search The Notes database</a>
+        <p><a href="{{ url_for('read_text') }}">Create An Audio File</a></p>
+        </p>
+    </div>
+</body>
+
+</html>

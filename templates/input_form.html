@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <h1>Enter Data</h1>
+            <li><a href="{{ url_for('index') }}">HOME</a></li><br />
+            <li><a href="{{ url_for('show_input_form') }}">Enter Data</a></li><br />
+            <li><a href="{{ url_for('searchdb') }}">Search The Notes database</a></li><br />
+            <li><a href="{{ url_for('read_text') }}">Create An Audio File</a></li><br />
+        </ul>
+
+        <form method="POST" action="/insert">
+            <textarea name="data" rows="30" cols="150"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

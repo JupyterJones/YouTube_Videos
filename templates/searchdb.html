@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        .formatted-text {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="{{ url_for('index') }}">Flask App</a></h1>
+    <h1>Search Results</h1>
+    {% if DATA %}
+        <ul>
+            {% for result in DATA %}
+                {% set result_parts = result.split('\n', 1) %}
+                <li class="formatted-text">{{ result_parts[1] }}</li>
+                <li>
+                    <p>Row ID: {{ ROWID }}</p>
+                    <a href="{{ url_for('delete_entry', row_id=ROWID) }}">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="column">
+            <div class='ctr'>
+                <h1>Flask App &nbsp;&nbsp;&nbsp;&nbsp;
+                <img class="small" src="{{ url_for('static', filename='assets/wildman_blurr.png') }}" alt="Welcome Image"></h1>
+            </div><br />
+            <p><a class="note" href="{{ url_for('index') }}">HOME</a></p>
+            <p><a class="note" href="{{ url_for('show_input_form') }}">Enter Data</a></p>
+            <p><a class="note" href="{{ url_for('searchdb') }}">Search The Notes database</a></p>
+            <p><a class="note" href="{{ url_for('read_text') }}">Create An Audio File</a></p>
+            <p><a class="note" href="{{ url_for('list_texts') }}">View a Text File</a></p>
+            <p><a class="note" href="{{ url_for('create_video') }}">Create a Video From Gifs</a></p>
+        </div>
+        <div class="column ctr">
+            <img src="{{ url_for('static', filename='images/Welcome.jpg') }}" alt="Welcome Image">
+            <br /><br />
+            <video controls width="300">
+                <source src="{{ url_for('static', filename='videos/welcome.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+
+</html>

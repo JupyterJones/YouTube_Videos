@@ -1,0 +1,25 @@
+<!-- File: show_video.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <style>
+        video {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 500px;
+            height: auto;
+        }</style>
+</head>
+<body>
+    <h1>Show Video</h1>
+    
+    <video width="600" height="auto" controls>
+        <source src="static/videos/Gif.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

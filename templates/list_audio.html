@@ -1,0 +1,30 @@
+<!-- File: list_audio.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Audio Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <h2>List of Audio Files</h2>
+        <ul>
+
+            <a class="Note" href="{{ url_for('index') }}">HOME</a><br />
+            <a class="Note" href="{{ url_for('read_text') }}">Create An Audio File</a><br /><br />
+
+            {% for audio_file in audio_files %}
+            <li><a href="{{ url_for('play_audio', filename=audio_file) }}">{{ audio_file }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- File: read_text_corrected.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-to-Speech</title>
+</head>
+<body>
+    <h1>Text-to-Speech</h1>
+    <form method="POST">
+        <textarea name="text" rows="5" cols="40" placeholder="Enter text"></textarea><br>
+        <button type="submit">Read Aloud</button>
+    </form>
+
+    {% if speech %}
+    <audio controls>
+        {% if 'encode_audio' in app.jinja_env.filters %}
+            <source src="data:audio/mpeg;base64,{{ app.jinja_env.filters['encode_audio'](speech) }}" type="audio/mpeg">
+        {% else %}
+            <!-- Log a warning message in case the filter is not recognized -->
+            {% set _ = logger.warning("encode_audio filter is NOT recognized in the template") %}
+        {% endif %}
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+
+    <script>
+        function encode_audio(data) {
+            return btoa(String.fromCharCode.apply(null, data));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+flask==2.1.1
+moviepy
+opencv-python==4.8.0.74
+numpy==1.22.3
+scipy==1.8.0
+matplotlib
+requests==2.27.1
+spacy==3.2.4
+sumy==0.9.0
+pygame
+gtts
+pydub==0.25.1
+bs4
