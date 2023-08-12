@@ -1,0 +1,1 @@
+This makes the basic Flask application and will work for me as a teaching guide. We just need pleasant soft music as a bacground

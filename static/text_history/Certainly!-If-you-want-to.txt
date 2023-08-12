@@ -1,0 +1,1 @@
+Certainly! If you want to display the generated video in your Flask application, you can modify your existing code to create a link that allows users to view the video after it's generated. Here's how you can do it:

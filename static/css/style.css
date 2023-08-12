@@ -1,0 +1,92 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 90%;
+    background-color: chocolate;
+    margin: 0;
+    padding: 5%;
+}
+
+img{
+    width: 70%;
+    height: auto;
+    border: #000000 solid 2px;
+}
+
+video{
+    width: 180px;
+    height: auto;
+    border: #000000 solid 2px;
+}
+
+/* Apply styles for the container and columns */
+/* Apply styles for the container and columns */
+.container {
+    margin: auto; /* Center container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%; /* Set container width to 85% of the viewport width */
+    height: 500px; /* Set container height to viewport height */
+    background-color: #d6caa1;
+    margin-top: 5px;
+    padding : 10px;
+    border: #000000 solid 2px;
+    padding-top: 0%;
+    box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+
+}
+
+.column {
+    flex: 1; /* Distribute available space equally between columns */
+    width: 30%; /* Set column width to half of the container's width */
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #044133;
+    background-color: rgb(198, 216, 198);
+    box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -11px 11px 10px 0px rgba(0, 0, 0, 0.51);
+    margin: 10px; /* Add some space between columns */
+    margin-top: 5px;
+    padding-top: 5px;
+}
+.ctr{
+    text-align: center;
+    color: rgb(105, 5, 25);    
+}
+
+textarea{
+   
+    margin-left: 20px auto;  
+    width: 90%;
+    height: 400px;
+    resize: none;
+}
+
+#wrapper{
+    width: 60%;
+    margin: auto;
+    background-color: bisque;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.Note{
+    color: brown;
+    font-size: large;
+}
+.note{
+    color: brown;
+    font-size: x-large;
+}
+.small{
+    width: 75px;
+    height: 75px;
+}

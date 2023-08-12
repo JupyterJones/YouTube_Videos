@@ -1,0 +1,22 @@
+app = Flask(__name__)
+
+# Configure logging
+log_file = 'app.log'
+max_log_size = 10 * 1024 * 1024  # 10 MB
+
+handler = RotatingFileHandler(log_file, maxBytes=max_log_size, backupCount=1)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.INFO)
+
+# Create a logger for the current module
+logger = logging.getLogger(__name__)
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
+
+

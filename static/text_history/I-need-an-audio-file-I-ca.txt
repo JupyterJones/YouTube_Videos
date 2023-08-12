@@ -1,0 +1,3 @@
+I need an audio file I can play with. I want to experiment with Python and sound processing.
+This is a very soft sounding voice so it will be fun to see if I can modify it enough that it will sound like a man speaking. 
+I want to use a deeper mans voice on someof my projects.

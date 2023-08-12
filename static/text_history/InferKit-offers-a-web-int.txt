@@ -1,0 +1,1 @@
+InferKit offers a web interface and API for AI–based text generators. Whether you're a novelist looking for inspiration, or an app developer, there's something for you.
